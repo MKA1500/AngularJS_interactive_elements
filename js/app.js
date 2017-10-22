@@ -5,7 +5,7 @@ app.factory('arrayFactory', function () {
         getArray: function () {
             var array = [];
             for (var i = 0; i < 100; i++) {
-                array.push(i.toString());
+                array.push(i);
             }
             return array;
         }
@@ -14,6 +14,6 @@ app.factory('arrayFactory', function () {
 
 app.controller('interactiveDivs', ['$scope', 'arrayFactory',
     function ($scope, arrayFactory) {
-        $scope.factoryArrayObject = arrayFactory.getArray();
-        console.log($scope.factoryArrayObject);
+        $scope.items = arrayFactory.getArray();
+        console.log($scope.items);
     }]);
