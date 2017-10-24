@@ -33,11 +33,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
     margin: 0 2px 15px;
-    padding: 5px;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
     position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
 .number-info {
@@ -47,9 +47,10 @@ body {
     top: 10px;
     left: 10px;
     color: #333;
+    transition: all 0.5s ease-in-out;
 }
 
-.green .number-info {
+.third .number-info {
     color: #FFF;
 }
 
@@ -58,16 +59,70 @@ body {
 }
 
 .btn.remove-button {
-    float: right;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transition: all 0.5s ease-in-out;
 }
 
-.changed {
-    border: 3px solid #ff51d6!important;
-    height: 200px;
+.change-label {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+    color: #FFF;
+    width: 86px;
+    height: 28px;
+    transition: all 0.5s ease-in-out;
 }
 
 .third {
-    background-color: #b7f7b4!important;
+    background-color: #28a745!important;
+    border-color: #28a745!important;
+    cursor: pointer;
+}
+
+.third.changed {
+    height: 260px!important;
+    border-radius: 100%!important;
+    background-color: #ffc107!important;
+    border-color: #ffc107!important;
+    transition: all 1s ease-in-out;
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.75)!important;
+    -moz-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.75)!important;
+    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.75)!important;
+}
+
+.third.changed .btn.remove-button {
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #111;
+    border-color: #111;
+    transition: all 1s ease-in-out;
+}
+
+.third.changed .change-label {
+    color: #111;
+    width: 90px;
+    height: 30px;
+    right: 50%;
+    margin-right: -45px;
+    font-size: 25px;
+    bottom: 50px;
+    font-size: 20px;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+
+.third.changed .number-info {
+    color: #111;
+    width: 100%;
+    top: 65px;
+    font-size: 30px;
+    text-align: center;
+    left: 0;
 }
 
 @media (min-width: 580px) {
