@@ -16,4 +16,7 @@ app.controller('interactiveDivs', ['$scope', 'arrayFactory',
     function ($scope, arrayFactory) {
         $scope.items = arrayFactory.getArray();
         console.log($scope.items);
+        $scope.divVisible = true;
+        $scope.toggle = false;
+        $scope.third = false;
     }]);
